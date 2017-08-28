@@ -1,0 +1,104 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.1 (lin64) Build 1846317 Fri Apr 14 18:54:47 MDT 2017
+| Date         : Mon Jun 12 16:06:50 2017
+| Host         : 3rdyearlabdesign running 64-bit Ubuntu 17.04
+| Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -rpx system_wrapper_methodology_drc_routed.rpx
+| Design       : system_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 12
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell                     | 8          |
+| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten | 4          |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin system_i/adc_processing_0/U0/led_out_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+XDCC-5#1 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on dac_pwm_o[0] overrides a previous user property.
+New Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 111)
+Previous Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 99)
+Related violations: <none>
+
+XDCC-5#2 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on dac_pwm_o[1] overrides a previous user property.
+New Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 111)
+Previous Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 99)
+Related violations: <none>
+
+XDCC-5#3 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on dac_pwm_o[2] overrides a previous user property.
+New Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 111)
+Previous Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 99)
+Related violations: <none>
+
+XDCC-5#4 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on dac_pwm_o[3] overrides a previous user property.
+New Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 111)
+Previous Source: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc (Line: 99)
+Related violations: <none>
+
+

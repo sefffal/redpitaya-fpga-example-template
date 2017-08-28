@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Jun 12 16:01:57 2017
+# Process ID: 16329
+# Current directory: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1
+# Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/system_wrapper.vds
+# Journal file: /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace

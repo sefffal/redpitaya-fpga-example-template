@@ -1,0 +1,49 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port adc_enc_p_o -pg 1 -y 110 -defaultsOSRD
+preplace port DDR -pg 1 -y 70 -defaultsOSRD
+preplace port Vp_Vn -pg 1 -y 100 -defaultsOSRD
+preplace port Vaux0 -pg 1 -y 20 -defaultsOSRD
+preplace port adc_csn_o -pg 1 -y 20 -defaultsOSRD
+preplace port Vaux1 -pg 1 -y 40 -defaultsOSRD
+preplace port adc_clk_p_i -pg 1 -y 140 -defaultsOSRD
+preplace port dac_rst_o -pg 1 -y 190 -defaultsOSRD
+preplace port dac_clk_o -pg 1 -y 130 -defaultsOSRD
+preplace port adc_enc_n_o -pg 1 -y 40 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 90 -defaultsOSRD
+preplace port dac_sel_o -pg 1 -y 210 -defaultsOSRD
+preplace port dac_wrt_o -pg 1 -y 230 -defaultsOSRD
+preplace port Vaux8 -pg 1 -y 60 -defaultsOSRD
+preplace port adc_clk_n_i -pg 1 -y 120 -defaultsOSRD
+preplace port Vaux9 -pg 1 -y 80 -defaultsOSRD
+preplace portBus daisy_n_i -pg 1 -y 510 -defaultsOSRD
+preplace portBus adc_dat_b_i -pg 1 -y 370 -defaultsOSRD
+preplace portBus exp_p_tri_io -pg 1 -y 270 -defaultsOSRD
+preplace portBus exp_n_tri_io -pg 1 -y 250 -defaultsOSRD
+preplace portBus led_o -pg 1 -y 370 -defaultsOSRD
+preplace portBus daisy_p_o -pg 1 -y 480 -defaultsOSRD
+preplace portBus dac_pwm_o -pg 1 -y 170 -defaultsOSRD
+preplace portBus daisy_n_o -pg 1 -y 500 -defaultsOSRD
+preplace portBus adc_dat_a_i -pg 1 -y 350 -defaultsOSRD
+preplace portBus daisy_p_i -pg 1 -y 490 -defaultsOSRD
+preplace portBus dac_dat_o -pg 1 -y 150 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 1 -y 490 -defaultsOSRD
+preplace inst util_ds_buf_2 -pg 1 -lvl 2 -y 490 -defaultsOSRD
+preplace inst adc_processing_0 -pg 1 -lvl 2 -y 370 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 1 NJ
+preplace netloc adc_processing_0_led_out 1 2 1 NJ
+preplace netloc util_ds_buf_1_IBUF_OUT 1 1 1 N
+preplace netloc adc_dat_a_i_1 1 0 2 NJ 350 NJ
+preplace netloc daisy_p_i_1 1 0 1 NJ
+preplace netloc util_ds_buf_2_OBUF_DS_N 1 2 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 NJ
+preplace netloc util_ds_buf_2_OBUF_DS_P 1 2 1 NJ
+preplace netloc adc_dat_b_i_1 1 0 2 NJ 370 NJ
+preplace netloc Net 1 1 2 320 300 800
+preplace netloc daisy_n_i_1 1 0 1 NJ
+levelinfo -pg 1 0 170 560 820 -top 0 -bot 560
+",
+}
+0

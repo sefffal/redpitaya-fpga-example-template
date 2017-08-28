@@ -1,0 +1,698 @@
+
+*** Running vivado
+    with args -log system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+
+
+****** Vivado v2017.1 (64-bit)
+  **** SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+  **** IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/will/redpitaya/fpga_examples/redpitaya_guide/tmp/cores'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.1/data/ip'.
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 1091.281 ; gain = 0.004 ; free physical = 320 ; free virtual = 10999
+Command: synth_design -top system_wrapper -part xc7z010clg400-1 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010-clg400'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16365 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1159.859 ; gain = 55.992 ; free physical = 218 ; free virtual = 10909
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_wrapper' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'system' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:13]
+INFO: [Synth 8-638] synthesizing module 'system_adc_processing_0_0' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_adc_processing_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'system_adc_processing_0_0' (1#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_adc_processing_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'system_processing_system7_0_0' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'system_processing_system7_0_0' (2#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 131 connections, but only 70 given [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:140]
+INFO: [Synth 8-638] synthesizing module 'system_util_ds_buf_1_0' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'system_util_ds_buf_1_0' (3#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_util_ds_buf_1_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'system_util_ds_buf_2_0' [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_util_ds_buf_2_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'system_util_ds_buf_2_0' (4#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/realtime/system_util_ds_buf_2_0_stub.v:6]
+WARNING: [Synth 8-3848] Net adc_csn_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:78]
+WARNING: [Synth 8-3848] Net adc_enc_n_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:81]
+WARNING: [Synth 8-3848] Net adc_enc_p_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:82]
+WARNING: [Synth 8-3848] Net dac_clk_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:83]
+WARNING: [Synth 8-3848] Net dac_dat_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:84]
+WARNING: [Synth 8-3848] Net dac_pwm_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:85]
+WARNING: [Synth 8-3848] Net dac_rst_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:86]
+WARNING: [Synth 8-3848] Net dac_sel_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:87]
+WARNING: [Synth 8-3848] Net dac_wrt_o in module/entity system does not have driver. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:88]
+INFO: [Synth 8-256] done synthesizing module 'system' (5#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system.v:13]
+INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (6#1) [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+WARNING: [Synth 8-3331] design system has unconnected port adc_csn_o
+WARNING: [Synth 8-3331] design system has unconnected port adc_enc_n_o
+WARNING: [Synth 8-3331] design system has unconnected port adc_enc_p_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_clk_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[13]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[12]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[11]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[10]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[9]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[8]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[7]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[6]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[5]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[4]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[3]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[2]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[1]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[0]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[3]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[2]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[1]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[0]
+WARNING: [Synth 8-3331] design system has unconnected port dac_rst_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_sel_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_wrt_o
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[7]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[6]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[5]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[4]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[3]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[2]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[1]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[0]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[7]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[6]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[5]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[4]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[3]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[2]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[1]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[0]
+WARNING: [Synth 8-3331] design system has unconnected port adc_clk_n_i
+WARNING: [Synth 8-3331] design system has unconnected port adc_clk_p_i
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1200.359 ; gain = 96.492 ; free physical = 227 ; free virtual = 10920
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1200.359 ; gain = 96.492 ; free physical = 227 ; free virtual = 10920
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc] for cell 'system_i/util_ds_buf_1'
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc] for cell 'system_i/util_ds_buf_1'
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc] for cell 'system_i/util_ds_buf_2'
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc] for cell 'system_i/util_ds_buf_2'
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp15/system_adc_processing_0_0_in_context.xdc] for cell 'system_i/adc_processing_0'
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp15/system_adc_processing_0_0_in_context.xdc] for cell 'system_i/adc_processing_0'
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc:9]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc:9]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc:10]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc:10]
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/clocks.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc]
+WARNING: [Vivado 12-584] No ports matched 'Vp_Vn_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:123]
+WARNING: [Vivado 12-584] No ports matched 'Vp_Vn_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'Vaux0_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'Vaux0_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'Vaux8_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'Vaux8_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'Vp_Vn_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'Vp_Vn_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'Vaux0_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'Vaux0_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'Vaux1_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'Vaux8_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'Vaux8_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:141]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_p'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'Vaux9_v_n'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'exp_p_trg'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:173]
+WARNING: [Vivado 12-584] No ports matched 'exp_p_trg'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'exp_p_trg'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'exp_p_trg'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:177]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[*]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:179]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[*]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[*]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:181]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[0]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:183]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[1]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:184]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[2]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:185]
+WARNING: [Vivado 12-584] No ports matched 'exp_n_alex[3]'. [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc:186]
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.srcs/constrs_1/imports/cfg/ports.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1486.398 ; gain = 0.000 ; free physical = 121 ; free virtual = 10687
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1486.398 ; gain = 382.531 ; free physical = 197 ; free virtual = 10763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1486.398 ; gain = 382.531 ; free physical = 197 ; free virtual = 10763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ba[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cas_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cke. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cke. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_cs_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_p. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ck_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dm[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_p[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dqs_n[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[15]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[16]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[17]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[18]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[19]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[20]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[21]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[22]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[23]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[24]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 105).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 106).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[25]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 107).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 108).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[26]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 109).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 110).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[27]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 111).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 112).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[28]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 113).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 114).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[29]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 115).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 116).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 117).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 118).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[30]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 119).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 120).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[31]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 121).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 122).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 123).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 124).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 125).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 126).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 127).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 128).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 129).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 130).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 131).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 132).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 133).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 134).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_dq[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 135).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 136).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_reset_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 137).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_odt. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 138).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_odt. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 139).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 140).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_ras_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 141).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 142).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrn. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 143).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 144).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ddr_vrp. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 145).
+Applied set_property IO_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 146).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_we_n. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 147).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 148).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 149).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 150).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[10]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 151).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 152).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[11]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 153).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 154).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[12]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 155).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 156).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[13]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 157).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 158).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[14]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 159).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 160).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[15]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 161).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 162).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[16]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 163).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 164).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[17]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 165).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 166).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[18]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 167).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 168).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[19]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 169).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 170).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 171).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 172).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[20]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 173).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 174).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[21]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 175).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 176).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[22]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 177).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 178).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[23]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 179).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 180).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[24]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 181).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 182).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[25]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 183).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 184).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[26]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 185).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 186).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[27]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 187).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 188).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[28]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 189).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 190).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[29]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 191).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 192).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[2]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 193).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 194).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[30]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 195).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 196).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[31]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 197).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 198).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[32]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 199).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 200).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[33]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 201).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 202).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[34]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 203).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 204).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[35]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 205).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 206).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[36]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 207).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 208).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[37]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 209).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 210).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[38]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 211).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 212).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[39]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 213).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 214).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[3]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 215).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 216).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[40]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 217).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 218).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[41]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 219).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 220).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[42]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 221).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 222).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[43]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 223).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 224).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[44]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 225).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 226).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[45]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 227).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 228).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[46]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 229).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 230).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[47]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 231).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 232).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[48]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 233).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 234).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[49]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 235).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 236).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[4]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 237).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 238).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[50]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 239).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 240).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[51]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 241).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 242).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[52]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 243).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 244).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[53]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 245).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 246).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[5]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 247).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 248).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[6]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 249).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 250).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[7]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 251).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 252).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[8]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 253).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 254).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_mio[9]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 255).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 256).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_clk. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 257).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 258).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 259).
+Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 260).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp9/system_processing_system7_0_0_in_context.xdc, line 261).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_n_i[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_n_i[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_n_i[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_n_i[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_p_i[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_p_i[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_p_i[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_p_i[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp11/system_util_ds_buf_1_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_n_o[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_n_o[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_n_o[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_n_o[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_p_o[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_p_o[0]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for daisy_p_o[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for daisy_p_o[1]. (constraint file  /home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/.Xil/Vivado-16329-3rdyearlabdesign/dcp13/system_util_ds_buf_2_0_in_context.xdc, line 8).
+Applied set_property DONT_TOUCH = true for system_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/adc_processing_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/util_ds_buf_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/util_ds_buf_2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1486.398 ; gain = 382.531 ; free physical = 196 ; free virtual = 10763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1486.398 ; gain = 382.531 ; free physical = 197 ; free virtual = 10764
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design system has unconnected port adc_csn_o
+WARNING: [Synth 8-3331] design system has unconnected port adc_enc_n_o
+WARNING: [Synth 8-3331] design system has unconnected port adc_enc_p_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_clk_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[13]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[12]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[11]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[10]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[9]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[8]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[7]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[6]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[5]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[4]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[3]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[2]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[1]
+WARNING: [Synth 8-3331] design system has unconnected port dac_dat_o[0]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[3]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[2]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[1]
+WARNING: [Synth 8-3331] design system has unconnected port dac_pwm_o[0]
+WARNING: [Synth 8-3331] design system has unconnected port dac_rst_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_sel_o
+WARNING: [Synth 8-3331] design system has unconnected port dac_wrt_o
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[7]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[6]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[5]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[4]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[3]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[2]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[1]
+WARNING: [Synth 8-3331] design system has unconnected port exp_n_tri_io[0]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[7]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[6]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[5]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[4]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[3]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[2]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[1]
+WARNING: [Synth 8-3331] design system has unconnected port exp_p_tri_io[0]
+WARNING: [Synth 8-3331] design system has unconnected port adc_clk_n_i
+WARNING: [Synth 8-3331] design system has unconnected port adc_clk_p_i
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1486.398 ; gain = 382.531 ; free physical = 184 ; free virtual = 10754
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_system7_0/FCLK_CLK0' to pin 'system_i/processing_system7_0/bbstub_FCLK_CLK0/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1515.398 ; gain = 411.531 ; free physical = 119 ; free virtual = 10633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1515.398 ; gain = 411.531 ; free physical = 118 ; free virtual = 10633
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 118 ; free virtual = 10632
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |system_adc_processing_0_0     |         1|
+|2     |system_processing_system7_0_0 |         1|
+|3     |system_util_ds_buf_1_0        |         1|
+|4     |system_util_ds_buf_2_0        |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |system_adc_processing_0_0     |     1|
+|2     |system_processing_system7_0_0 |     1|
+|3     |system_util_ds_buf_1_0        |     1|
+|4     |system_util_ds_buf_2_0        |     1|
+|5     |IBUF                          |    46|
+|6     |OBUF                          |     8|
+|7     |OBUFT                         |    25|
++------+------------------------------+------+
+
+Report Instance Areas: 
++------+-----------+-------+------+
+|      |Instance   |Module |Cells |
++------+-----------+-------+------+
+|1     |top        |       |   411|
+|2     |  system_i |system |   332|
++------+-----------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.414 ; gain = 421.547 ; free physical = 125 ; free virtual = 10640
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1525.414 ; gain = 135.508 ; free physical = 181 ; free virtual = 10696
+Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 1525.422 ; gain = 421.547 ; free physical = 181 ; free virtual = 10697
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+29 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 1531.414 ; gain = 440.133 ; free physical = 138 ; free virtual = 10656
+INFO: [Common 17-1381] The checkpoint '/home/will/redpitaya/fpga_examples/redpitaya_guide/adc_dac_control/adc_dac_control.runs/synth_1/system_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:03 . Memory (MB): peak = 1539.418 ; gain = 0.000 ; free physical = 130 ; free virtual = 10657
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 12 16:04:24 2017...
